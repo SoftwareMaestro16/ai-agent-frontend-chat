@@ -52,13 +52,13 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
 
   return (
     <form onSubmit={handleSubmit} className="relative z-[99999999999] flex-shrink-0">
-      <div className="w-full mx-auto px-3 sm:px-4 -py-5 sm:py-3 flex justify-center">
+      <div className="w-full mx-auto px-3 sm:px-4 py-3 sm:py-3 flex justify-center">
         <div className="relative group w-full max-w-4xl">
           {/* Gradient glow effect */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-light-accent via-light-accent-secondary to-light-accent dark:from-dark-accent dark:via-dark-accent-secondary dark:to-dark-accent-tertiary rounded-2xl blur opacity-50 sm:opacity-25 group-hover:opacity-60 sm:group-hover:opacity-50 transition-opacity animate-gradient" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-light-accent via-light-accent-secondary to-light-accent dark:from-dark-accent dark:via-dark-accent-secondary dark:to-dark-accent-tertiary rounded-2xl blur opacity-50 sm:opacity-25 group-hover:opacity-60 sm:group-hover:opacity-50 transition-opacity animate-gradient -z-10" />
           
           {/* Main input container */}
-          <div className="relative flex items-center gap-2 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-sm border-2 border-light-accent/40 dark:border-dark-accent/40 sm:border-gray-200 sm:dark:border-gray-700 rounded-2xl focus-within:border-light-accent dark:focus-within:border-dark-accent transition-all shadow-2xl sm:shadow-lg">
+          <div className="relative flex items-center gap-2 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-sm border-2 border-light-accent/40 dark:border-dark-accent/40 sm:border-gray-200 sm:dark:border-gray-700 rounded-2xl focus-within:border-light-accent dark:focus-within:border-dark-accent transition-all shadow-2xl sm:shadow-lg z-10">
             {/* Search indicator (left side) */}
             {useSearch && (
               <div className="flex items-center gap-1.5 sm:gap-2 pl-3 sm:pl-4 pr-2 sm:pr-3 border-r border-gray-200 dark:border-gray-700">

@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className=" border-t border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-xl flex-shrink-0">
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-6">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs sm:text-sm">
           <div className="flex items-center gap-2 text-light-text-secondary dark:text-dark-text-secondary text-center md:text-left">
             <Shield className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />

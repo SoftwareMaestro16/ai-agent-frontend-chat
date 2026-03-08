@@ -21,10 +21,9 @@ export function ChatContainer() {
 
   return (
     <>
-      <div className="flex flex-col relative overflow-hidden" style={{ height: 'calc(100vh - 100px)' }}>
-        {/* Background pattern for chat */}
-        {!isEmpty && (
-          <div className="absolute inset-0 pointer-events-none z-0">
+      {/* Background pattern for chat - positioned absolutely to cover entire viewport */}
+      {!isEmpty && (
+        <div className="fixed inset-0 pointer-events-none z-0">
           {/* Top circles */}
           <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-light-accent/8 via-light-accent-secondary/8 to-transparent dark:from-dark-accent/8 dark:via-dark-accent-secondary/8 rounded-full blur-3xl animate-pulse-glow" />
           <div className="absolute top-1/4 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-light-accent-secondary/8 via-light-accent/8 to-transparent dark:from-dark-accent-tertiary/8 dark:via-dark-accent/8 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
@@ -33,16 +32,18 @@ export function ChatContainer() {
           <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-gradient-to-tr from-light-accent/6 to-transparent dark:from-dark-accent-secondary/6 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />
           
           {/* Bottom circles */}
-          <div className="absolute -bottom-20 right-1/4 w-[480px] h-[480px] bg-gradient-to-tl from-light-accent-secondary/8 via-light-accent/8 to-transparent dark:from-dark-accent-tertiary/8 dark:via-dark-accent/8 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+          <div className="absolute bottom-20 right-1/4 w-[480px] h-[480px] bg-gradient-to-tl from-light-accent-secondary/8 via-light-accent/8 to-transparent dark:from-dark-accent-tertiary/8 dark:via-dark-accent/8 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
           <div className="absolute bottom-1/3 -left-20 w-[420px] h-[420px] bg-gradient-to-tr from-light-accent/7 to-transparent dark:from-dark-accent/7 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '0.5s' }} />
         </div>
       )}
+
+      <div className="flex flex-col relative overflow-hidden" style={{ height: 'calc(100vh - 100px)' }}>
       
       <div className="flex-1 overflow-y-auto relative z-10">
         {isEmpty ? (
           <EmptyState />
         ) : (
-          <div className="max-w-6xl mx-auto px-3 sm:px-4 pt-24 sm:pt-24 pb-3 sm:pb-6 space-y-4 sm:space-y-6">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 pt-4 sm:pt-4 pb-3 sm:pb-6 space-y-4 sm:space-y-6">
             <button
               onClick={clearMessages}
               className="group relative flex items-center gap-2 px-4 sm:px-4 py-2.5 sm:py-2 rounded-xl sm:rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 hover:from-red-100 hover:to-rose-100 dark:hover:from-red-950/50 dark:hover:to-rose-950/50 border-2 border-red-200/50 dark:border-red-800/50 hover:border-red-400 dark:hover:border-red-600 transition-all hover:scale-105 shadow-md hover:shadow-lg hover:shadow-red-500/20 overflow-hidden"
