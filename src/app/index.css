@@ -13,6 +13,9 @@ html {
   overflow: hidden;
   position: fixed;
   width: 100%;
+  /* Prevent mobile browser address bar from affecting layout */
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
 }
 
 body {

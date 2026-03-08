@@ -39,7 +39,7 @@ export function ChatContainer() {
 
       <div className="flex flex-col relative overflow-hidden" style={{ height: 'calc(100vh - 100px)' }}>
       
-      <div className="flex-1 overflow-y-auto relative z-10">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden relative z-10">
         {isEmpty ? (
           <EmptyState />
         ) : (
