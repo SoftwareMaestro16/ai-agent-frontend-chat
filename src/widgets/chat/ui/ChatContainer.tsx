@@ -20,10 +20,11 @@ export function ChatContainer() {
   const isEmpty = messages.length === 0;
 
   return (
-    <div className="flex-1 flex flex-col relative overflow-hidden">
-      {/* Background pattern for chat */}
-      {!isEmpty && (
-        <div className="absolute inset-0 pointer-events-none z-0">
+    <>
+      <div className="flex flex-col relative overflow-hidden" style={{ height: 'calc(100vh - 100px)' }}>
+        {/* Background pattern for chat */}
+        {!isEmpty && (
+          <div className="absolute inset-0 pointer-events-none z-0">
           {/* Top circles */}
           <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-light-accent/8 via-light-accent-secondary/8 to-transparent dark:from-dark-accent/8 dark:via-dark-accent-secondary/8 rounded-full blur-3xl animate-pulse-glow" />
           <div className="absolute top-1/4 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-light-accent-secondary/8 via-light-accent/8 to-transparent dark:from-dark-accent-tertiary/8 dark:via-dark-accent/8 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
@@ -41,7 +42,7 @@ export function ChatContainer() {
         {isEmpty ? (
           <EmptyState />
         ) : (
-          <div className="max-w-6xl mx-auto px-3 sm:px-4 pt-24 sm:pt-24 pb-0 sm:pb-6 space-y-4 sm:space-y-6">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 pt-24 sm:pt-24 pb-3 sm:pb-6 space-y-4 sm:space-y-6">
             <button
               onClick={clearMessages}
               className="group relative flex items-center gap-2 px-4 sm:px-4 py-2.5 sm:py-2 rounded-xl sm:rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 hover:from-red-100 hover:to-rose-100 dark:hover:from-red-950/50 dark:hover:to-rose-950/50 border-2 border-red-200/50 dark:border-red-800/50 hover:border-red-400 dark:hover:border-red-600 transition-all hover:scale-105 shadow-md hover:shadow-lg hover:shadow-red-500/20 overflow-hidden"
@@ -78,8 +79,9 @@ export function ChatContainer() {
           </div>
         )}
       </div>
+      </div>
 
       <ChatInput onSend={sendMessage} disabled={isPending} />
-    </div>
+    </>
   );
 }

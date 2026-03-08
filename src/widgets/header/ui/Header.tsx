@@ -28,8 +28,8 @@ export function Header() {
   };
 
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-xl sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-4 flex items-center justify-between">
+    <header className="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-xl sticky top-0 z-50 flex-shrink-0">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-light-accent to-light-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary flex items-center justify-center shadow-lg animate-gradient">
             <span className="text-xl sm:text-2xl font-black text-white">N</span>

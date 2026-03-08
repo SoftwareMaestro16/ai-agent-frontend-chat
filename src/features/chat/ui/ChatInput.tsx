@@ -51,8 +51,8 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
   const CurrentIcon = currentMode?.icon || Thermometer;
 
   return (
-    <form onSubmit={handleSubmit} className="relative z-[99999999999]">
-      <div className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-3 flex justify-center">
+    <form onSubmit={handleSubmit} className="relative z-[99999999999] flex-shrink-0">
+      <div className="w-full mx-auto px-3 sm:px-4 -py-5 sm:py-3 flex justify-center">
         <div className="relative group w-full max-w-4xl">
           {/* Gradient glow effect */}
           <div className="absolute -inset-1 bg-gradient-to-r from-light-accent via-light-accent-secondary to-light-accent dark:from-dark-accent dark:via-dark-accent-secondary dark:to-dark-accent-tertiary rounded-2xl blur opacity-50 sm:opacity-25 group-hover:opacity-60 sm:group-hover:opacity-50 transition-opacity animate-gradient" />
