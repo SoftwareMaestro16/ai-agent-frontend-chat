@@ -22,7 +22,7 @@ function AppContent() {
   }, [language, i18n]);
 
   return (
-    <div className="h-screen flex flex-col bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
+    <div className="h-screen flex flex-col bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text overflow-hidden">
       <Header />
       <ChatContainer />
       <Footer />
