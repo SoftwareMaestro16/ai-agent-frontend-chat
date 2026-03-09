@@ -222,3 +222,16 @@ body {
 .dark {
   color-scheme: dark;
 }
+
+/* Word breaking for long text */
+.word-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+}

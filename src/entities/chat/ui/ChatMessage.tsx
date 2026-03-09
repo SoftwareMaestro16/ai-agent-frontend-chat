@@ -22,13 +22,13 @@ export function ChatMessage({ message }: ChatMessageProps) {
         )}
       </div>
       
-      <div className={`flex-1 ${isUser ? 'text-right' : ''}`}>
-        <div className={`inline-block max-w-[90%] sm:max-w-[85%] px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all ${
+      <div className={`flex-1 min-w-0 ${isUser ? 'flex justify-end' : 'flex justify-start'}`}>
+        <div className={`inline-block max-w-full sm:max-w-[85%] px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all ${
           isUser
             ? 'bg-gradient-to-br from-light-accent to-light-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary text-white animate-gradient'
             : 'bg-gradient-to-br from-light-surface to-white dark:from-dark-surface dark:to-dark-bg border border-gray-200 dark:border-gray-700'
         }`}>
-          <p className="whitespace-pre-wrap break-words leading-relaxed text-sm sm:text-base">{message.content}</p>
+          <p className="whitespace-pre-wrap break-words word-break leading-relaxed text-sm sm:text-base overflow-wrap-anywhere">{message.content}</p>
         </div>
       </div>
     </div>
